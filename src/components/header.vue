@@ -1,3 +1,4 @@
+
 <template>
     <header class="bg-white">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -16,16 +17,12 @@
 
       <div class="md:flex md:items-center md:gap-12">
         <nav aria-label="Global" class="hidden md:block">
-          <ul class="flex items-center gap-6 text-sm">
-            
-
-           
+          <ul class="flex items-center gap-6 text-sm">   
             <li>
-              <router-link to="project" class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </router-link>
+              <router-link to="/project" class="text-gray-500 transition hover:text-gray-500/75"> Projects </router-link>
             </li>
-
             <li>
-              <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
+              <router-link to="/blog" class="text-gray-500 transition hover:text-gray-500/75"> Blog </router-link>
             </li>
           </ul>
         </nav>
