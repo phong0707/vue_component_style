@@ -1,6 +1,10 @@
 <template>
   <div class="grid gap-x-8 grid-cols-3" >
-    <ProductCard v-for="(product,index) in products" :key="index" :name="product.name" :des="product.des" :price="product.price"/>
+    <ProductCard v-for="(product,index) in products" :key="index" :name="product.name" :des="product.des" :price="product.price">
+      <template #footer>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+      </template>  
+    </ProductCard>
 
   </div>
 

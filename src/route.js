@@ -5,6 +5,7 @@ import project from "@/pages/project/index.vue";
 import Blog from "./components/blog.vue";
 import Project_detail from "./pages/project/project_detail.vue";
 import Collection from "./components/collection.vue";
+import NotFound from "./components/NotFound.vue";
 const routes = [
   { path: "/", component: Home },
   {
@@ -19,9 +20,11 @@ const routes = [
         path: ":id",
         component: Project_detail,
       },
+      
     ],
   },
   { path: "/blog", component: Blog },
+  { path: '/:notfound(.*)*', name: 'NotFound', component: NotFound },
 ];
 
 const router = createRouter({
