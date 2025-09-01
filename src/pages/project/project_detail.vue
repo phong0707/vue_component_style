@@ -11,7 +11,7 @@
         <p
           class="hidden max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed"
         >
-          {{ $route.params.title }}
+          
         </p>
 
         <div class="mt-4 sm:mt-8">

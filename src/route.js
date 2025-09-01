@@ -6,6 +6,7 @@ import Blog from "./components/blog.vue";
 import Project_detail from "./pages/project/project_detail.vue";
 import Collection from "./components/collection.vue";
 import NotFound from "./components/NotFound.vue";
+import Customer from "./pages/Customer.vue";
 const routes = [
   { path: "/", component: Home },
   {
@@ -24,6 +25,7 @@ const routes = [
     ],
   },
   { path: "/blog", component: Blog },
+  {path: '/customer', component: Customer},
   { path: '/:notfound(.*)*', name: 'NotFound', component: NotFound },
 ];
 

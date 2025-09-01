@@ -5,8 +5,8 @@
   >
     <div class="max-w-prose text-left">
       <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
-        Understand user flow and
-        <strong class="text-indigo-600"> increase </strong>
+        Understand user flow and 
+        <strong class="text-indigo-600"> increase {{ count }} </strong>
         conversions
       </h1>
 
@@ -16,12 +16,12 @@
       </p>
 
       <div class="mt-4 flex gap-4 sm:mt-6">
-        <a
+        <button @click="increment"
           class="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
           href="#"
         >
-          Get Started
-        </a>
+          Increment
+        </button>
 
         <a
           class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
@@ -65,3 +65,15 @@
   </div>
 </section>
 </template>
+<script>
+import useCounterStore from '@/stores/couter';
+import { mapActions, mapState } from 'pinia';
+export default {
+  computed:{
+    ...mapState(useCounterStore,['count'])
+  },
+  methods:{
+    ...mapActions(useCounterStore,['increment'])
+  }
+}
+</script>

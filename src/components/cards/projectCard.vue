@@ -3,7 +3,7 @@
             class="rounded-[10px] border hover:cursor-pointer border-gray-200 bg-white px-4 pt-12 pb-4"
           >
             <time datetime="2022-10-10" class="block text-xs text-gray-500">
-              {{ date }}
+              {{ formattedDate }}
             </time>
 
             <h3 class="mt-0.5 text-lg font-medium text-gray-900">
@@ -20,6 +20,7 @@
           </article>
 </template>
 <script>
+import moment from 'moment';
 export default {
     props:{
         id:{
@@ -40,6 +41,11 @@ export default {
             }
         }
 
+    },
+    computed:{
+      formattedDate() {
+        return moment(this.date).format('LL')
+      }
     },
     methods:{
         handClick() {

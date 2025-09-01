@@ -13,6 +13,10 @@
             />
           </svg>
         </router-link>
+        <router-link to="/" class="block text-teal-600" href="#">
+          <span class="sr-only">Home</span>
+          {{ count }}
+        </router-link>
       </div>
 
       <div class="md:flex md:items-center md:gap-12">
@@ -23,6 +27,9 @@
             </li>
             <li>
               <router-link to="/blog" class="text-gray-500 transition hover:text-gray-500/75"> Blog </router-link>
+            </li>
+            <li>
+              <router-link to="/customer" class="text-gray-500 transition hover:text-gray-500/75"> Customer </router-link>
             </li>
           </ul>
         </nav>
@@ -68,3 +75,13 @@
   </div>
 </header>
 </template>
+<script>
+import useCounterStore from '@/stores/couter';
+import { mapState } from 'pinia';
+export default {
+  computed:{
+    ...mapState(useCounterStore,['count'])
+  },
+  
+}
+</script>
