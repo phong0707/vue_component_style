@@ -7,6 +7,11 @@ import Project_detail from "./pages/project/project_detail.vue";
 import Collection from "./components/collection.vue";
 import NotFound from "./components/NotFound.vue";
 import Customer from "./pages/Customer.vue";
+
+import { HSStaticMethods } from "preline/preline";
+
+window.HSStaticMethods = HSStaticMethods;
+
 const routes = [
   { path: "/", component: Home },
   {
@@ -34,5 +39,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+router.afterEach((to,from,failure) =>{
+  if(!failure){
+    setTimeout(() => {
+      window.HSStaticMethods.autoInit();
+    }, 100);
+  }
+})
 
 export default router;
