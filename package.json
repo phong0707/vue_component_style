@@ -17,8 +17,11 @@
     "postcss": "^8",
     "preline": "^2.7.0",
     "tailwindcss": "^3",
+    "vee-validate": "^4.15.1",
     "vue": "^3.2.13",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "yub": "^0.11.1",
+    "yup": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -43,7 +46,8 @@
       "parser": "@babel/eslint-parser"
     },
     "rules": {
-      "vue/multi-word-component-names": "off"
+      "vue/multi-word-component-names": "off",
+      "vue/no-unused-components": "off"
     }
   },
   "browserslist": [

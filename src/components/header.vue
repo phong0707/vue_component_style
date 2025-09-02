@@ -69,6 +69,7 @@
                   aria-expanded="false"
                   aria-controls="hs-scale-animation-modal"
                   data-hs-overlay="#register-modal"
+                  @click="isOpen = true"
                 >
                   Register
                 </button>
@@ -104,9 +105,19 @@
 <script>
 import useCounterStore from "@/stores/couter";
 import { mapState } from "pinia";
+import TemplateModal from "./template-modal.vue";
 export default {
+  components:{
+    TemplateModal
+  },
   computed: {
     ...mapState(useCounterStore, ["count"]),
   },
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+
 };
 </script>

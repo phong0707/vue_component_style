@@ -4,8 +4,9 @@
     <transition name="fade">
       <component :is="Component" />
     </transition>
-    <RegisterModal />
+    
   </router-view>
+  <RegisterModal />
   <FooterSection />
 </template>
 
